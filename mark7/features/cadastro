@@ -1,0 +1,23 @@
+#language:pt
+Funcionalidade: Cadastro de usuários
+    Sendo um visitante
+    Posso fazer meu cadastro
+    Para poder gerenciar minhas tarefas
+
+    1 - Cadastro simples
+    Nome, email, e a Senha do usuário
+
+    RN1: O email deve ser chave simples e unique 
+    RN2: Todos os campos são obrigatórios para preenchimento
+    RN3: A senha do cliente deve ter no mínimo 6 caracteres 
+
+@cadastro
+Cenário: Cadastro simples
+    Dado que eu estou no formulário de cadastro
+    E possuo os seguintes dados:
+        |nome|Hudson|
+        |email|hu.psilva@gmail.com|
+        |senha|hpereira83|
+    Quando eu faço o meu cadastro
+    Então vejo o meu painel de tarefas
+    E uma mensagem de boas vindas

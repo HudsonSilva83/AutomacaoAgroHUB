@@ -1,0 +1,29 @@
+Dado("que eu estou no formulário de cadastro") do
+  
+  visit 'https://mark7.herokuapp.com/register'
+  
+    
+  end
+  
+  Dado("possuo os seguintes dados:") do |table|
+    @usuario = table.rows_hash
+     
+  end
+  
+  Quando("eu faço o meu cadastro") do
+    find('#register_name').set @usuario[:nome] #id
+    find('input[name=register_email]').set @usuario[:email] #name
+    find('input[type=password').set @usuario[:senha] #type
+    find('button[type=submit]').click #button
+    sleep 10
+
+
+  end
+  
+  Então("vejo o meu painel de tarefas") do
+   
+  end
+  
+  Então("uma mensagem de boas vindas") do
+    
+  end
